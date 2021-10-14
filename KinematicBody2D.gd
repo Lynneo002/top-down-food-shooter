@@ -4,7 +4,7 @@ export var ACCELERATION = 500
 export var MAX_SPEED = 100
 export var FRICTION = 500
 
-var velocity = Vector2.ZERO 
+var velocity = Vector2.ZERO
 
 var is_player = true
 func _physics_process(delta):

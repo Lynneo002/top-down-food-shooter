@@ -5,6 +5,9 @@ export var MAX_SPEED = 100
 export var FRICTION = 500
 
 var velocity = Vector2.ZERO
+const Bullet = preload("res://src/Objects/Bullet.tscn")
+const BULLET_VELOCITY = 500.0
+onready var timer = $Cooldown
 
 var is_player = true
 func _physics_process(delta):
@@ -23,6 +26,8 @@ func _physics_process(delta):
 		
 	velocity = move_and_slide(velocity)
 	
+	if Input.is_mouse_button_pressed(1):
+		shoot(1)
 	if Input.is_action_pressed("ui_left"): 
 		$AnimatedSprite.flip_h = true
 	if Input.is_action_pressed("ui_right"): 
@@ -35,3 +40,14 @@ func _physics_process(delta):
 func _on_Area2D_body_entered(body):
 	hide()
 	get_tree().change_scene("res://Control.tscn")
+
+#called by player.gd
+func shoot(direction = 1):
+	if not timer.is_stopped():
+		return false
+	var bullet = Bullet.instance()
+	bullet.global_position = global_position
+	bullet.linear_velocity = Vector2(direction * BULLET_VELOCITY, 0)
+	bullet.set_as_toplevel(true)
+	add_child(bullet)
+	return true

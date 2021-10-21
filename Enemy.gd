@@ -17,6 +17,7 @@ func _ready():
 		levelNavigation = tree.get_nodes_in_group("LevelNavigation")[0]
 	if tree.has_group("Player"):
 		player = tree.get_nodes_in_group("Player")[0]
+	print(player, levelNavigation)
 
 func _physics_process(delta):
 	line2d.global_position = Vector2.ZERO
@@ -39,5 +40,7 @@ func generate_path():
 
 func move():
 	velocity = move_and_slide(velocity)
+
+
 
 

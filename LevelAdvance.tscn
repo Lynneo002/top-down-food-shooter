@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://LevelAdvance.gd" type="Script" id=1]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="LevelAdvance" type="Popup" parent="."]
+pause_mode = 2
+visible = true
+margin_right = 40.0
+margin_bottom = 40.0
+popup_exclusive = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="LevelAdvance"]
+margin_left = 120.0
+margin_top = 100.0
+margin_right = 300.0
+margin_bottom = 120.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "You may advance!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="LevelAdvance"]
+margin_left = 120.0
+margin_top = 200.0
+margin_right = 300.0
+margin_bottom = 220.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Press Escape to Continue"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

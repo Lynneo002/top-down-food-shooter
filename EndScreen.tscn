@@ -1,25 +1,18 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Control.gd" type="Script" id=1]
+[ext_resource path="res://EndScreen.gd" type="Script" id=1]
 
-[node name="Control" type="Control"]
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="EndScreen" type="Node2D"]
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -213.0
-margin_top = -120.0
-margin_right = 215.0
-margin_bottom = 123.0
-color = Color( 0.0313726, 0.0313726, 0.0313726, 1 )
+margin_right = 428.0
+margin_bottom = 243.0
+color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -36,7 +29,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Restart" type="ColorRect" parent="."]
+[node name="Restart" type="ColorRect" parent="ColorRect"]
 margin_left = 175.0
 margin_top = 130.0
 margin_right = 251.0
@@ -45,7 +38,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Restart"]
+[node name="Label" type="Label" parent="ColorRect/Restart"]
 margin_right = 76.0
 margin_bottom = 20.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -56,7 +49,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Quit" type="ColorRect" parent="."]
+[node name="Quit" type="ColorRect" parent="ColorRect"]
 margin_left = 175.0
 margin_top = 160.0
 margin_right = 251.0
@@ -65,7 +58,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Quit"]
+[node name="Label" type="Label" parent="ColorRect/Quit"]
 margin_right = 76.0
 margin_bottom = 20.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )

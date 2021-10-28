@@ -18,10 +18,22 @@ _global_script_classes=[ {
 "class": "Coin",
 "language": "GDScript",
 "path": "res://src/Objects/Coin.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Enemy",
+"language": "GDScript",
+"path": "res://Enemy.gd"
+}, {
+"base": "Position2D",
+"class": "Gun",
+"language": "GDScript",
+"path": "res://Emitter.gd"
 } ]
 _global_script_class_icons={
 "Bullet": "",
-"Coin": ""
+"Coin": "",
+"Enemy": "",
+"Gun": ""
 }
 
 [application]

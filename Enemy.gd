@@ -1,3 +1,4 @@
+class_name Enemy
 extends KinematicBody2D
 
 # pathfinding
@@ -41,6 +42,5 @@ func generate_path():
 func move():
 	velocity = move_and_slide(velocity)
 
-
-
-
+func destroy():
+	queue_free()

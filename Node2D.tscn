@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://KinematicBody2D.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://0x72_DungeonTilesetII_v1.4.png" type="Texture" id=2]
 [ext_resource path="res://Enemy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Node2D.gd" type="Script" id=4]
